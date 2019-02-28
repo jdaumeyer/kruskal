@@ -1,13 +1,22 @@
-def sort (e):
+def sort (e)
     return int(e[0])
 
 def kruskal (e1, e2, e3, e4, e5, e6):
     edges = [[e1, "AB"], [e2, "BC"], [e3, "CD"], [e4, "DA"], [e5, "AC"], [e6, "BD"]]
     edges.sort(key=sort)
-    return edges[0:3]
+    keptEdges = []
+    connections = 0
+    i = 0
+
+    while connections < (NODE_NUM - 1):
+        keptEdges.append(edges[i])
+        i++;
+        connections++;
+    
+    return keptEdges
     
 
-running = True
+running = False
 while running:
     edge1 = input("Distance from A to B: ")
     edge2 = input("Distance from B to C: ")
