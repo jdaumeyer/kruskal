@@ -10,8 +10,8 @@ def kruskal (e1, e2, e3, e4, e5, e6):
 
     while connections < (NODE_NUM - 1):
         keptEdges.append(edges[i])
-        i++;
-        connections++;
+        i += 1;
+        connections += 1;
     
     return keptEdges
     
